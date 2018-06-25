@@ -291,8 +291,7 @@
 </span><span class="p">{</span><span class="w">
     </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
     </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"privateKey"</span><span class="p">:</span><span class="w"> </span><span class="s2">"43239e69d7dab718bdc3c408addb578a:4b6364b6379389fb70e83ebf45ad6878fb381fc51c07cdac1765ea647053d16a0e11db868d38bb66d1ee41977c70311eaee51b9e45d7a89f426dc3820dff97564cbf66962c6b92e82f204d595edfcc9b"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1FCoVD3aQqjry9VzTd9aznxXECpgJdcH6c"</span><span class="w">
+      </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"5b307e892e951b38cc334f57"</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
@@ -329,9 +328,9 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>address</td>
+<td>id</td>
 <td>required</td>
-<td>Wallet address</td>
+<td>Client wallet ID</td>
 </tr>
 <tr>
 <td>contract</td>
@@ -411,9 +410,8 @@
 <p>Request Parameter Example:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"privateKey"</span><span class="p">:</span><span class="w"> </span><span class="s2">"e53da85eec153edfee2f76d2e33272d0:f8653d5249799bdf373610cc"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"from"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0xFC3ED4408Ea84bA57088c15A59813Dd72c159FF2"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"to"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0xeCD64a11Cc4a08CbB2aBB5CCD244b94ED5D7aC3F"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"from"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5b307e892e951b38cc334f57"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"to"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5b307e892e951b38cc334f58"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0091</span><span class="p">,</span><span class="w">
   </span><span class="s2">"contract"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x4e005a760e00e17c4912a8070eec047cfecbabbb"</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -435,7 +433,7 @@
   </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="err">&lt;Error</span><span class="w"> </span><span class="err">message&gt;</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-5'>HTTP Request</h3>
-<p><code>POST /transaction/create/</code></p>
+<p><code>POST /transaction/create</code></p>
 <h3 id='request-parameters-2'>Request Parameters</h3>
 <table><thead>
 <tr>
@@ -445,19 +443,14 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>privateKey</td>
-<td>required</td>
-<td>Private key</td>
-</tr>
-<tr>
 <td>from</td>
 <td>required</td>
-<td>Sender&#39;s wallet address</td>
+<td>Sender&#39;s wallet ID</td>
 </tr>
 <tr>
 <td>to</td>
 <td>required</td>
-<td>Receiver&#39;s wallet address</td>
+<td>Receiver&#39;s wallet ID</td>
 </tr>
 <tr>
 <td>amount</td>
@@ -521,9 +514,9 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>address</td>
+<td>id</td>
 <td>required</td>
-<td>Wallet address</td>
+<td>Wallet ID</td>
 </tr>
 </tbody></table>
 
