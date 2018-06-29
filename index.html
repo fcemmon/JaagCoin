@@ -291,7 +291,9 @@
 </span><span class="p">{</span><span class="w">
     </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
     </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"5b307e892e951b38cc334f57"</span><span class="w">
+      </span><span class="s2">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"5b307e892e951b38cc334f57"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"address"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"0x2B5C6B3ECC3fC1401A2dAa555537eFC601DE1488"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"hash"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"U2FsdGVkX19qAWUClhpEEfMmbiTycPktPRo4EUGkfYulKu8iFHvXTkGDmTgkIQXugGwsXtHJ6cdPWPU5QHjFahLxYJAYfL3LkBTCVcmqXMFHJfTIzhDwzVXR4G+2U4VG"</span><span class="w">  
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
@@ -330,7 +332,12 @@
 <tr>
 <td>id</td>
 <td>required</td>
-<td>Client wallet ID</td>
+<td>Client ID</td>
+</tr>
+<tr>
+<td>address</td>
+<td>optional</td>
+<td>Wallet ID</td>
 </tr>
 <tr>
 <td>contract</td>
@@ -410,9 +417,12 @@
 <p>Request Parameter Example:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"from"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5b307e892e951b38cc334f57"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"to"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5b307e892e951b38cc334f58"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0091</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"fromAddress"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x2B5C6B3ECC3fC1401A2dAa555537eFC601DE1488"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"fromID"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"5b34fd7d6f7a191ef842c925"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"toAddress"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x52B6b72d2b6EFc4AC4BE30E42B7b67BB7dc39cdD"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"toID"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"5b34fd515708be30b8a76413"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"hash"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"U2FsdGVkX19qAWUClhpEEfMmbiTycPktPRo4EUGkfYulKu8iFHvXTkGDmTgkIQXugGwsXtHJ6cdPWPU5QHjFahLxYJAYfL3LkBTCVcmqXMFHJfTIzhDwzVXR4G"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
   </span><span class="s2">"contract"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x4e005a760e00e17c4912a8070eec047cfecbabbb"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
@@ -443,14 +453,29 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>from</td>
+<td>fromID</td>
 <td>required</td>
 <td>Sender&#39;s wallet ID</td>
 </tr>
 <tr>
-<td>to</td>
+<td>fromAddress</td>
+<td>optional</td>
+<td>Sender&#39;s wallet ID</td>
+</tr>
+<tr>
+<td>toID</td>
 <td>required</td>
+<td>Receiver&#39;s client ID</td>
+</tr>
+<tr>
+<td>toAddress</td>
+<td>optional</td>
 <td>Receiver&#39;s wallet ID</td>
+</tr>
+<tr>
+<td>hash</td>
+<td>optional</td>
+<td>Sender&#39;s hash</td>
 </tr>
 <tr>
 <td>amount</td>
@@ -516,6 +541,11 @@
 <tr>
 <td>id</td>
 <td>required</td>
+<td>Client ID</td>
+</tr>
+<tr>
+<td>address</td>
+<td>optional</td>
 <td>Wallet ID</td>
 </tr>
 <tr>
