@@ -235,10 +235,21 @@
               </ul>
           </li>
           <li>
+            <a href="#transfer-gas-fee-to-address" class="toc-h1 toc-link" data-title="Transfer gas fee to address">Transfer gas fee to address</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#http-request-3" class="toc-h2 toc-link" data-title="Transfer gas fee to address">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#query-parameters-2" class="toc-h2 toc-link" data-title="Transfer gas fee to address">Query Parameters</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#get-contract-rate-in-blockchain-network" class="toc-h1 toc-link" data-title="Get contract rate in blockchain network">Get contract rate in blockchain network</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#http-request-3" class="toc-h2 toc-link" data-title="Get contract rate in blockchain network">HTTP Request</a>
+                    <a href="#http-request-4" class="toc-h2 toc-link" data-title="Get contract rate in blockchain network">HTTP Request</a>
                   </li>
                   <li>
                     <a href="#request-parametersters" class="toc-h2 toc-link" data-title="Get contract rate in blockchain network">Request Parametersters</a>
@@ -249,7 +260,7 @@
             <a href="#update-contract-rate-in-blockchain-network" class="toc-h1 toc-link" data-title="Update contract rate in blockchain network">Update contract rate in blockchain network</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#http-request-4" class="toc-h2 toc-link" data-title="Update contract rate in blockchain network">HTTP Request</a>
+                    <a href="#http-request-5" class="toc-h2 toc-link" data-title="Update contract rate in blockchain network">HTTP Request</a>
                   </li>
                   <li>
                     <a href="#request-parameters" class="toc-h2 toc-link" data-title="Update contract rate in blockchain network">Request Parameters</a>
@@ -260,7 +271,7 @@
             <a href="#create-new-transaction" class="toc-h1 toc-link" data-title="Create new transaction">Create new transaction</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#http-request-5" class="toc-h2 toc-link" data-title="Create new transaction">HTTP Request</a>
+                    <a href="#http-request-6" class="toc-h2 toc-link" data-title="Create new transaction">HTTP Request</a>
                   </li>
                   <li>
                     <a href="#request-parameters-2" class="toc-h2 toc-link" data-title="Create new transaction">Request Parameters</a>
@@ -271,7 +282,7 @@
             <a href="#get-received-transaction-list-by-address" class="toc-h1 toc-link" data-title="Get received transaction list by address">Get received transaction list by address</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#http-request-6" class="toc-h2 toc-link" data-title="Get received transaction list by address">HTTP Request</a>
+                    <a href="#http-request-7" class="toc-h2 toc-link" data-title="Get received transaction list by address">HTTP Request</a>
                   </li>
                   <li>
                     <a href="#request-parameters-3" class="toc-h2 toc-link" data-title="Get received transaction list by address">Request Parameters</a>
@@ -345,6 +356,44 @@
 <td>Smart contract address (<strong>only ERC20 tokens</strong>)</td>
 </tr>
 </tbody></table>
+<h1 id='transfer-gas-fee-to-address'>Transfer gas fee to address</h1>
+<blockquote>
+<p>Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="err">-</span><span class="w"> </span><span class="err">success</span><span class="w">
+</span><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"txid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x7d680934e35d32f891e3e49b12f33bb65b82d6b270d3dc058365313d921c0c67"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="err">-</span><span class="w"> </span><span class="err">failed</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="err">&lt;Error</span><span class="w"> </span><span class="err">message&gt;</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-3'>HTTP Request</h3>
+<p><code>POST /wallet/getGasFee</code></p>
+<h3 id='query-parameters-2'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>required</td>
+<td>Client ID</td>
+</tr>
+<tr>
+<td>address</td>
+<td>optional</td>
+<td>Wallet ID</td>
+</tr>
+</tbody></table>
 <h1 id='get-contract-rate-in-blockchain-network'>Get contract rate in blockchain network</h1>
 <blockquote>
 <p>Response</p>
@@ -360,7 +409,7 @@
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
   </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="err">&lt;Error</span><span class="w"> </span><span class="err">message&gt;</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='http-request-3'>HTTP Request</h3>
+</span></code></pre><h3 id='http-request-4'>HTTP Request</h3>
 <p><code>POST /contract/rate/view</code></p>
 <h3 id='request-parametersters'>Request Parametersters</h3>
 <table><thead>
@@ -391,7 +440,7 @@
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
   </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="err">&lt;Error</span><span class="w"> </span><span class="err">message&gt;</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='http-request-4'>HTTP Request</h3>
+</span></code></pre><h3 id='http-request-5'>HTTP Request</h3>
 <p><code>POST /contract/rate/update</code></p>
 <h3 id='request-parameters'>Request Parameters</h3>
 <table><thead>
@@ -442,7 +491,7 @@
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
   </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="err">&lt;Error</span><span class="w"> </span><span class="err">message&gt;</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='http-request-5'>HTTP Request</h3>
+</span></code></pre><h3 id='http-request-6'>HTTP Request</h3>
 <p><code>POST /transaction/create</code></p>
 <h3 id='request-parameters-2'>Request Parameters</h3>
 <table><thead>
@@ -528,7 +577,7 @@
   </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
   </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="err">&lt;Error</span><span class="w"> </span><span class="err">message&gt;</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='http-request-6'>HTTP Request</h3>
+</span></code></pre><h3 id='http-request-7'>HTTP Request</h3>
 <p><code>POST /transaction/list</code></p>
 <h3 id='request-parameters-3'>Request Parameters</h3>
 <table><thead>
